@@ -1,0 +1,48 @@
+.primary-bg-color {
+    background-color: #fbfafc;
+}
+
+.icon-color {
+    background: #6a5575;
+    color: #fff;
+}
+
+.primary-font-color {
+    color: #92819b;
+}
+
+.xl-font {
+    font-size: 13px;
+    color: #6a5575;
+    font-weight: 500;
+}
+
+.xl-sub-item {
+    color: #6a5774;
+}
+
+.icon-sidebar {
+    opacity: 0.5;
+    color: #92819b;
+    font-weight: 600;
+}
+
+.input {
+    opacity: 0;
+    font-weight: bold;
+}
+
+.title-size {
+    font-size: 72px !important;
+    font-weight: 600;
+}
+
+.subtitle-size {
+    font-size: 20px;
+}
+
+@media (max-width: 1100px) {
+    .title-size {
+        font-size: 72px !important;
+    }
+}
