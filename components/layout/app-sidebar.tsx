@@ -15,10 +15,10 @@ export function AppSidebar({ items, expandedItems, onToggleExpanded, onClose, cu
   return (
     <aside
       className="xl:static inset-y-0 left-0 z-50 w-80 bg-white border-r border-gray-200 transform transition-transform duration-300 ease-in-out xl:transform-none primary-bg-color"
-      style={{ maxWidth: "300px" }}
+      style={{ maxWidth: "300px", position: "fixed" }}
     >
       {/* Sidebar Header */}
-      <div className="p-4 border-gray-200" style={{ display: "flex", justifyContent: "space-around" }}>
+      <div className="p-6 border-gray-200" style={{ display: "flex", justifyContent: "space-around" }}>
         <Link
           href="/"
           className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"

@@ -13,7 +13,15 @@ interface AppHeaderProps {
 
 export function AppHeader({ searchValue, onSearchChange, onOpenSearchModal, onOpenSidebar }: AppHeaderProps) {
   return (
-    <header className="bg-white border-b border-gray-200 px-4 xl:px-6 py-2.5 primary-bg-color">
+    <header
+      className="bg-white border-b border-gray-200 px-4 xl:px-6 py-2.5 primary-bg-color"
+      style={{
+        position: "fixed",
+        width: "calc(100vw - 300px)",
+        right: 0,
+        zIndex: 3,
+      }}
+    >
       <div className="flex items-center justify-between w-full">
         <div className="flex-1 max-w-xs lg:max-w-sm" style={{ maxWidth: "17rem" }}>
           <div className="relative">

@@ -8,7 +8,9 @@ interface ArticleContentProps {
 
 export function ArticleContent({ article }: ArticleContentProps) {
   return (
-    <div className="md:py-6 md:px-40">
+    <div
+      className="md:py-6 md:px-40"
+    >
       <Breadcrumb items={article.breadcrumb} />
 
       {/* Article Title */}

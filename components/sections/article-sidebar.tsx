@@ -12,7 +12,17 @@ interface ArticleSidebarProps {
 
 export function ArticleSidebar({ summary, activeSection, scrollToSection, copyLink }: ArticleSidebarProps) {
   return (
-    <aside className="hidden lg:block bg-gray-100 border-l border-gray-200 min-h-screen" style={{ minWidth: "200px" }}>
+    <aside
+      className="hidden xl:block bg-gray-100 border-l border-gray-200"
+      style={{
+        minWidth: "200px",
+        right: 0,
+        bottom: 0,
+        position: "fixed",
+        height: "calc(100vh - 61px)",
+        width: "10vw"
+      }}
+    >
       <div className="sticky top-0 p-6">
         <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">SUMMARY</h3>
         <nav className="space-y-1">
@@ -20,9 +30,8 @@ export function ArticleSidebar({ summary, activeSection, scrollToSection, copyLi
             <button
               key={index}
               onClick={() => scrollToSection(item.id)}
-              className={`block w-full text-left text-sm py-2 px-0 transition-colors ${
-                activeSection === item.id ? "text-purple-600 font-medium" : "text-gray-600 hover:text-gray-900"
-              }`}
+              className={`block w-full text-left text-sm py-2 px-0 transition-colors ${activeSection === item.id ? "text-purple-600 font-medium" : "text-gray-600 hover:text-gray-900"
+                }`}
             >
               {item.title}
             </button>

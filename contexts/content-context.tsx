@@ -30,7 +30,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
 
   // Save content to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem("whimsical-content", JSON.stringify(content))
+    // localStorage.setItem("whimsical-content", JSON.stringify(content))
   }, [content])
 
   const updateContent = (section: string, data: any) => {
@@ -42,7 +42,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
 
   const resetContent = () => {
     setContent(defaultContent)
-    localStorage.removeItem("whimsical-content")
+    // localStorage.removeItem("whimsical-content")
   }
 
   return <ContentContext.Provider value={{ content, updateContent, resetContent }}>{children}</ContentContext.Provider>
