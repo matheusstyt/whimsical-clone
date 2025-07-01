@@ -4,7 +4,7 @@ import type React from "react"
 import { useMemo } from "react"
 import type { ReactElement } from "react"
 import { useRef, useEffect, useState } from "react"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import type { SidebarItem } from "@/types/content"
@@ -24,6 +24,7 @@ export function SearchModal({
   onSearchChange,
   items,
 }: SearchModalProps): ReactElement | null {
+  const pathname = usePathname();
   const modalRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -66,6 +67,7 @@ export function SearchModal({
     if (item.subitems && item.subitems.length > 0) {
       router.push(`/article/${item.subitems[0].slug}`)
     }
+
     onClose()
   }
 
@@ -94,7 +96,23 @@ export function SearchModal({
 
   // 🔄 Reset do índice selecionado quando filtros mudam
   useEffect(() => {
-    setSelectedIndex(0)
+    // let selectedItem: string = pathname.split("/")[2]
+    // setSelectedIndex(0)
+
+    console.log()
+
+    if (pathname.split("/")[1] === "article") {
+      let selectedItem: string = pathname.split("/")[2];
+      const selectedIndex = items.findIndex(item => item.title.toLowerCase().replace(" ", "-") === selectedItem.toLowerCase());
+
+      if (selectedIndex !== -1) {
+        setSelectedIndex(selectedIndex);
+      } else {
+        setSelectedIndex(0); // Valor padrão caso não encontre
+      }
+    } else setSelectedIndex(0); 
+
+    // console.log(items);
   }, [searchValue])
 
   // 🖱️ Fechar ao clicar fora
@@ -127,7 +145,11 @@ export function SearchModal({
         aria-modal="true"
         aria-labelledby="search-modal-title"
       >
-        <SearchModal.Header searchValue={searchValue} onSearchChange={onSearchChange} onKeyDown={handleKeyDown} />
+        <SearchModal.Header
+          searchValue={searchValue}
+          onSearchChange={onSearchChange}
+          onKeyDown={handleKeyDown}
+        />
         <SearchModal.Content
           items={filteredItems}
           onItemClick={navigateToItem}
