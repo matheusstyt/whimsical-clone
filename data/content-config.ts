@@ -239,7 +239,7 @@ export const defaultContent: ContentConfig = {
       ],
       content: `
         <div class="mb-8">
-          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          <p class="text-md text-gray-700 leading-relaxed mb-6">
             A <a href="#" class="text-purple-600 hover:text-purple-700 underline">sequence diagram</a> is a type of UML (Unified Modeling Language) diagram that shows the interactions between various components or objects in a system. It provides a visual representation of the order of messages or events over time.
           </p>
         </div>

@@ -20,7 +20,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
           md:py-6 md:px-40 lg:w-[calc(100vw-300px)] xl:w-[calc(100vw-500px)] 
           mt-[60px] lg:mr-0 lg:mb-0 lg:ml-auto
           xl:mr-[200px]
-          lg:px-20
+          lg:px-20 xl:px-40
     "
       style={{
 
