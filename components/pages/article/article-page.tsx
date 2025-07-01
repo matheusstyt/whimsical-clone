@@ -30,7 +30,15 @@ export function ArticlePage() {
   if (!article) {
     return (
       <Layout searchValue={searchValue} onSearchChange={setSearchValue} currentSlug={slug}>
-        <div className="flex items-center justify-center min-h-96 mt-[60px]">
+        <div
+          className="flex items-center justify-center min-h-96 mt-[60px]"
+          style={{
+            // background: "red",
+            width: "calc(100vw - 300px)",
+            position: "absolute",
+            right: 0
+          }}
+        >
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Artigo não encontrado</h1>
             <p className="text-gray-600">O artigo que você está procurando não existe.</p>
@@ -42,7 +50,7 @@ export function ArticlePage() {
 
   return (
     <Layout searchValue={searchValue} onSearchChange={setSearchValue} currentSlug={slug}>
-      <div className="flex-1 flex" style={{justifyContent: "right"}}>
+      <div className="flex-1 flex" style={{ justifyContent: "right" }}>
         <ArticleContent article={article} />
         <ArticleSidebar
           summary={article.summary}
