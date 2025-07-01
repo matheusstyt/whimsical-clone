@@ -27,7 +27,7 @@ export interface ArticleSummary {
 
 export interface Article {
   title: string
-  breadcrumb: string[]
+  breadcrumb:{ text: string, goTo: string }[],
   summary: ArticleSummary[]
   content: string
 }

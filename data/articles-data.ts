@@ -1,7 +1,11 @@
 export const articles = {
   "getting-started/sequence-diagrams": {
     title: "Getting started with sequence diagrams",
-    breadcrumb: ["Help Center", "Getting started", "Getting started with sequence diagrams"],
+    breadcrumb: [
+      { text: "Help Center", goTo: "/" },
+      { text: "Getting started", goTo: "" },
+      { text: "General shortcuts", goTo: "" },
+    ],
     summary: [
       { title: "Getting started with sequence diagrams", id: "getting-started" },
       { title: "How to create a sequence diagram", id: "how-to-create" },

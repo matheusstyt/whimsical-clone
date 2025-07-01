@@ -1,14 +1,6 @@
 import type { Article } from "@/types/content"
+import Link from "next/link"
 
-// <div
-//   className="md:py-6 md:px-40 w-[calc(100vw-500px)] xl:w-[calc(100vw-300px)] lg:ml-[200px] lg:mr-[0px] xl:mr-[200px]"
-//   style={{
-//     margin: "0 auto",
-//     background: "red",
-//     marginTop: "60px",
-//     paddingBottom: "400px",
-//   }}
-// >
 interface ArticleContentProps {
   article: Article
 }
@@ -34,7 +26,12 @@ export function ArticleContent({ article }: ArticleContentProps) {
           article.breadcrumb.map((crumb, index) => (
             <div key={index} className="flex items-center space-x-2">
               {index > 0 && <span>/</span>}
-              <span className={index === article.breadcrumb.length - 1 ? "text-gray-900 font-medium" : ""}>{crumb}</span>
+              <Link
+                href={crumb.goTo}
+                className={index === article.breadcrumb.length - 1 ? "text-gray-900 font-medium" : ""}
+              >
+                {crumb.text}
+              </Link>
             </div>
           ))
         }

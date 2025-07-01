@@ -30,7 +30,7 @@ export function ArticlePage() {
   if (!article) {
     return (
       <Layout searchValue={searchValue} onSearchChange={setSearchValue} currentSlug={slug}>
-        <div className="flex items-center justify-center min-h-96">
+        <div className="flex items-center justify-center min-h-96 mt-[60px]">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Artigo não encontrado</h1>
             <p className="text-gray-600">O artigo que você está procurando não existe.</p>

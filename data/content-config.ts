@@ -232,7 +232,11 @@ export const defaultContent: ContentConfig = {
   articles: {
     "getting-started/sequence-diagrams": {
       title: "Getting started with sequence diagrams",
-      breadcrumb: ["Help Center", "Getting started", "Getting started with sequence diagrams"],
+      breadcrumb: [
+        { text: "Help Center", goTo: "/" },
+        // { text: "Getting started", goTo: "/getting-started/" },
+        { text: "Getting started with sequence diagrams", goTo: "" },
+      ],
       summary: [
         { title: "Getting started with sequence diagrams", id: "getting-started" },
         { title: "How to create a sequence diagram", id: "how-to-create" },
@@ -286,7 +290,11 @@ export const defaultContent: ContentConfig = {
     },
     "getting-started/what-is-whimsical": {
       title: "What is Whimsical?",
-      breadcrumb: ["Help Center", "Getting started", "What is Whimsical?"],
+      breadcrumb: [
+        { text: "Help Center", goTo: "/" },
+        // { text: "Getting started", goTo: "" },
+        { text: "What is Whimsical?", goTo: "" },
+      ],
       summary: [
         { title: "What is Whimsical?", id: "what-is-whimsical" },
         { title: "Key Features", id: "key-features" },
@@ -314,7 +322,11 @@ export const defaultContent: ContentConfig = {
     },
     "keyboard-shortcuts/general": {
       title: "General Keyboard Shortcuts",
-      breadcrumb: ["Help Center", "Keyboard shortcuts", "General shortcuts"],
+      breadcrumb: [
+        { text: "Help Center", goTo: "/" },
+        // { text: "Getting started", goTo: "" },
+        { text: "General shortcuts", goTo: "" },
+      ],
       summary: [
         { title: "General Shortcuts", id: "general-shortcuts" },
         { title: "Navigation", id: "navigation" },

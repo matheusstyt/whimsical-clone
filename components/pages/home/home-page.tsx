@@ -113,12 +113,13 @@ function SearchModalContent({ isOpen, onClose, searchValue, onSearchChange, item
   })
 
   // Navegar para item
-  const navigateToItem = (item: SidebarItem) => {
+  const navigateToItem = (item: SidebarItem, index: number) => {
+    setSelectedIndex(index); // Atualiza o índice selecionado
     if (item.subitems && item.subitems.length > 0) {
-      router.push(`/article/${item.subitems[0].slug}`)
+      router.push(`/article/${item.subitems[0].slug}`);
     }
-    onClose()
-  }
+    onClose();
+  };
 
   // Keyboard navigation
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -192,10 +193,10 @@ function SearchModalContent({ isOpen, onClose, searchValue, onSearchChange, item
             <div
               key={`${item.title}-${index}`}
               className={`
-                flex items-start space-x-3 p-3 lg:p-4 cursor-pointer border-b border-gray-50 last:border-b-0 transition-colors
-                ${index === selectedIndex ? "bg-purple-50 border-purple-100" : "hover:bg-gray-50"}
-              `}
-              onClick={() => navigateToItem(item)}
+      flex items-start space-x-3 p-3 lg:p-4 cursor-pointer border-b border-gray-50 last:border-b-0 transition-colors
+      ${index === selectedIndex ? "bg-purple-50 border-purple-100" : "hover:bg-gray-50"}
+    `}
+              onClick={() => navigateToItem(item, index)} // Passa o index aqui
             >
               <div className="flex-shrink-0 mt-0.5">
                 <div
