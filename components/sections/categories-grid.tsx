@@ -8,7 +8,7 @@ interface CategoriesGridProps {
 
 export function CategoriesGrid({ title, categories }: CategoriesGridProps) {
   return (
-    <div>
+    <div className="max-w-full xl:max-w-none lg:max-w-[600px] lg:mx-auto">
       <h2
         className="text-lg lg:text-xl text-gray-900 mb-6 lg:mb-5 px-4"
         style={{ color: "#6a5575", fontSize: "18.5px", fontWeight: 500 }}

@@ -1,5 +1,14 @@
 import type { Article } from "@/types/content"
 
+// <div
+//   className="md:py-6 md:px-40 w-[calc(100vw-500px)] xl:w-[calc(100vw-300px)] lg:ml-[200px] lg:mr-[0px] xl:mr-[200px]"
+//   style={{
+//     margin: "0 auto",
+//     background: "red",
+//     marginTop: "60px",
+//     paddingBottom: "400px",
+//   }}
+// >
 interface ArticleContentProps {
   article: Article
 }
@@ -7,14 +16,15 @@ interface ArticleContentProps {
 export function ArticleContent({ article }: ArticleContentProps) {
   return (
     <div
-      className="md:py-6 md:px-40 xl:w-[calc(100vw-300px)] xl:w-[calc(100vw-500px)] 
-      lg:ml-[200px] lg:mr-[0px] xl:mr-[200px]" 
+      className="
+          md:py-6 md:px-40 lg:w-[calc(100vw-300px)] xl:w-[calc(100vw-500px)] 
+          mt-[60px] lg:mr-0 lg:mb-0 lg:ml-auto
+          xl:mr-[200px]
+          lg:px-20
+    "
       style={{
-        // width: "calc(100vw - 500px)",
-        margin: "0 auto",
-        background: "red",
-        // marginRight: "200px",
-        marginTop: "60px",
+
+        // background: "red",
         paddingBottom: "400px",
       }}
     >

@@ -42,7 +42,7 @@ export function ArticlePage() {
 
   return (
     <Layout searchValue={searchValue} onSearchChange={setSearchValue} currentSlug={slug}>
-      <div className="flex-1 flex">
+      <div className="flex-1 flex" style={{justifyContent: "right"}}>
         <ArticleContent article={article} />
         <ArticleSidebar
           summary={article.summary}

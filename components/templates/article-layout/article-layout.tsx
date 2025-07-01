@@ -11,7 +11,7 @@ interface ArticleLayoutProps {
 
 export function ArticleLayout({ article, activeSection, scrollToSection, copyLink }: ArticleLayoutProps) {
   return (
-    <div className="flex-1 flex" style={{justifyContent: "right"}}>
+    <div className="flex-1 flex">
       <ArticleContent article={article} />
       <ArticleSidebar
         summary={article.summary}
