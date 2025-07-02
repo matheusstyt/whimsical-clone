@@ -7,16 +7,17 @@
 
 import { forwardRef } from "react"
 import { Input as ShadcnInput } from "@/components/ui/input"
-import type { InputProps as ShadcnInputProps } from "@/components/ui/input"
+// import type { InputProps as ShadcnInputProps } from "@/components/ui/input"
 
 // 🎯 Interface do componente
-export interface InputProps extends ShadcnInputProps {
+export interface InputProps  { //extends ShadcnInputProps
   /** Texto de ajuda exibido abaixo do input */
   helperText?: string
   /** Se o input tem erro */
   error?: boolean
   /** Mensagem de erro */
   errorMessage?: string
+  className?: string
 }
 
 /**

@@ -1,5 +1,5 @@
-import { Breadcrumb } from "@/components/molecules/breadcrumb/breadcrumb"
 import { Heading } from "@/components/atoms/typography/heading"
+import { Breadcrumb } from "@/components/molecules/breadcrumb/breadcrumb"
 import type { Article } from "@/types/content"
 
 interface ArticleContentProps {

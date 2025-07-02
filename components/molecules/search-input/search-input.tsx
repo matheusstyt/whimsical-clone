@@ -8,8 +8,8 @@
 "use client"
 
 import { Search } from "lucide-react"
-import { Input } from "@/components/atoms/input/input"
 import { ACCESSIBILITY } from "@/config/constants"
+import { Input } from "@/components/ui/input"
 
 // 🎯 Interface do componente
 interface SearchInputProps {
@@ -80,10 +80,10 @@ export function SearchInput({
 
       {/* 📝 Input principal */}
       <Input
-        type="text"
+        type={"text"}
         placeholder={placeholder}
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(e: any) => onChange(e.target.value)}
         onFocus={onFocus}
         className={inputClasses}
         aria-label={ACCESSIBILITY.LABELS.SEARCH_INPUT}

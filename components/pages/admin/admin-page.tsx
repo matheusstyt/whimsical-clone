@@ -76,7 +76,7 @@ export function AdminPage() {
                   <label className="block text-sm font-medium mb-2">Title</label>
                   <Input
                     value={content.homepage.hero.title}
-                    onChange={(e) => {
+                    onChange={(e:any) => {
                       const newContent = {
                         ...content,
                         homepage: {

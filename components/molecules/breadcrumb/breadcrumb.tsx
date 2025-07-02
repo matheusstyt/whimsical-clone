@@ -1,5 +1,5 @@
 interface BreadcrumbProps {
-  items: string[]
+  items: { text: string; goTo: string; }[]
 }
 
 export function Breadcrumb({ items }: BreadcrumbProps) {
@@ -8,7 +8,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
       {items.map((item, index) => (
         <div key={index} className="flex items-center space-x-2">
           {index > 0 && <span>/</span>}
-          <span className={index === items.length - 1 ? "text-gray-900 font-medium" : ""}>{item}</span>
+          <span className={index === items.length - 1 ? "text-gray-900 font-medium" : ""}>{item.text}</span>
         </div>
       ))}
     </nav>
