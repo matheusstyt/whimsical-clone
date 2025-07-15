@@ -33,12 +33,13 @@ function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link
       href={category.link}
-      className="bg-white rounded-lg border border-gray-200 p-4 lg:p-6 hover:border-purple-200 transition-all duration-200 cursor-pointer group aspect-square flex flex-col relative overflow-hidden"
+      className="bg-white p-4 lg:p-6 cursor-pointer group aspect-square flex flex-col relative overflow-hidden"
       style={{
         maxHeight: "225px",
         width: "256px",
         background: "#FFFFFF",
-        borderBottom: "1px solid #a7a7a7ff",
+        border: "1px solid #ccccccff",
+        borderRadius: "15px"
       }}
     >
       <div className="flex flex-col h-full relative z-10">
@@ -67,13 +68,13 @@ function CategoryCard({ category }: CategoryCardProps) {
           {category.description && (
             <p
               className="text-gray-600 text-xs lg:text-sm mb-2 lg:mb-3 leading-relaxed flex-1"
-              style={{ fontSize: "13px", color: "#92819b", fontWeight: 500 }}
+              style={{ fontSize: "13px", color: "#252525", fontWeight: 500 }}
             >
               {category.description}
             </p>
           )}
           {category.articles && (
-            <p className="text-xs text-gray-400 font-medium tracking-wide mt-auto" style={{ fontSize: "9px" }}>
+            <p className="text-xs text-gray-400 font-medium tracking-wide mt-auto" style={{ fontSize: "9px", color: "#000000"}}>
               {category.articles}
             </p>
           )}

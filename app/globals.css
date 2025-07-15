@@ -93,12 +93,15 @@
 }
 
 .help-center {
-  background: #f6f2f7;
-  color: #5f4c6a;
+  background: #FFFFFF;
+  color: #000000;
+  border-bottom-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+  border-top-right-radius: 19px;
+  border-top-left-radius: 19px;
+  padding: 9px 15px 9px 15px;
   font-weight: 600;
   font-size: 13px;
-  padding-right: 5px;
-  padding-left: 5px;
 }
 
 .icon-color {
@@ -505,13 +508,13 @@
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .title-size {
-    font-size: 48px !important;
+    font-size: 32px !important;
   }
 }
 
 @media (max-width: 1023px) {
   .title-size {
-    font-size: 48px !important;
+    font-size: 32px !important;
   }
 
   .subtitle-size {

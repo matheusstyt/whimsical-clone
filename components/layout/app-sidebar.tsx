@@ -32,7 +32,7 @@ export function AppSidebar({ items, expandedItems, onToggleExpanded, onClose, cu
         >
           <img src={LogoPassChumbo} />
         </Link>
-        <span className="text-gray-600 text-sm mt-1 block help-center">Help Center</span>
+        <span className="text-black-600 text-sm mt-1 block help-center">Help Center</span>
       </div>
 
       <nav className="px-4 space-y-1 overflow-y-auto h-full" style={{ height: "100vh" }}>
