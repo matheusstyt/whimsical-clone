@@ -20,10 +20,12 @@ export function AppHeader({ searchValue, onSearchChange, onOpenSearchModal, onOp
         width: "calc(100vw - 300px)",
         right: 0,
         zIndex: 3,
+        background: "#F5F5F5",
+        borderBottom: "1px solid #ccccccff",
       }}
     >
       <div className="flex items-center justify-between w-full">
-        <div className="flex-1 max-w-xs lg:max-w-sm" style={{ maxWidth: "17rem" }}>
+        <div className="flex-1 max-w-xs lg:max-w-sm" style={{ maxWidth: "18rem", }}>
           <div className="relative">
             <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             <Input
@@ -33,6 +35,12 @@ export function AppHeader({ searchValue, onSearchChange, onOpenSearchModal, onOp
               onChange={(e) => onSearchChange(e.target.value)}
               onFocus={onOpenSearchModal}
               className="pl-8 pr-12 py-1.5 w-full text-sm border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500 primary-bg-color"
+              style={{
+                background: "#FFFFFF",
+                borderRadius: "11px",
+                border: "1px #ccccccff solid",
+                height: "35px",
+              }}
             />
             <div className="absolute right-2.5 top-1/2 transform -translate-y-1/2 text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded hidden lg:block">
               CTRL K

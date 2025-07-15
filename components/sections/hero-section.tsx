@@ -47,7 +47,7 @@ export function HeroSection({
       <h1 className="text-3xl font-bold leading-tight title-size">{renderTitle()}</h1>
       <p
         className="text-gray-600 text-base lg:text-lg mb-8 lg:mb-6 leading-relaxed px-4 subtitle-size"
-        style={{ color: "#6a5575" }}
+        style={{ color: "#252525" }}
         dangerouslySetInnerHTML={{ __html: subtitle }}
       />
 
@@ -61,8 +61,8 @@ export function HeroSection({
           onChange={(e) => onSearchChange(e.target.value)}
           onFocus={onOpenSearchModal}
           onClick={onOpenSearchModal} // Adiciona click handler
-          className="pl-12 pr-16 py-3 w-full text-sm border-2 border-purple-200 rounded-lg focus:ring-purple-500 focus:border-purple-500 shadow-sm cursor-pointer"
-          style={{ height: "48px" }}
+          className="pl-12 pr-16 py-3 w-full text-sm border-1 rounded-lg focus:ring-purple-500 focus:border-purple-500 shadow-sm cursor-pointer"
+          style={{ height: "43px", background: "#FFFFFF", borderRadius: "12px", border: "1px #ccccccff solid", }}
           readOnly // Torna o input apenas para abrir o modal
         />
         <div className="absolute right-8 top-1/2 transform -translate-y-1/2 text-sm text-gray-400 bg-gray-100 px-2 py-1 rounded hidden lg:block">

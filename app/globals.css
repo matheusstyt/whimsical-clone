@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: plus-jakarta;
+  src: url('../public/Fonte/PlusJakartaSans-Regular.ttf') format('truetype');
+  font-weight: 400; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: plus-jakarta;
+  src: url('../public/Fonte/PlusJakartaSans-Medium.ttf') format('truetype');
+  font-weight: 500; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: plus-jakarta;
+  src: url('../public/Fonte/PlusJakartaSans-Bold.ttf') format('truetype');
+  font-weight: 700; 
+  font-style: normal;
+}
+
 /* 🎨 VARIÁVEIS CSS PERSONALIZADAS */
 :root {
   /* Cores do tema Whimsical */
@@ -35,7 +56,7 @@
 
 /* 🎨 Aplicar fonte Inter globalmente */
 * {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+  font-family: "plus-jakarta", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
@@ -101,7 +122,7 @@
 
 .icon-sidebar {
   opacity: 0.5;
-  color: #92819b;
+  color: #000000;
   font-weight: 600;
 }
 

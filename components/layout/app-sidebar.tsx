@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { ChevronRight, ExternalLink } from "lucide-react"
 import type { SidebarItem } from "@/types/content"
+import LogoPassChumbo from "../../public/logo_pass_2025_chumbo.svg"
 
 interface AppSidebarProps {
   items: SidebarItem[]
@@ -15,7 +16,12 @@ export function AppSidebar({ items, expandedItems, onToggleExpanded, onClose, cu
   return (
     <aside
       className="xl:static inset-y-0 left-0 z-50 w-80 bg-white border-r border-gray-200 transform transition-transform duration-300 ease-in-out xl:transform-none primary-bg-color"
-      style={{ maxWidth: "300px", position: "fixed" }}
+      style={{
+        maxWidth: "300px",
+        position: "fixed",
+        background: "#F5F5F5",
+        borderRight: "1px solid #ccccccff",
+      }}
     >
       {/* Sidebar Header */}
       <div className="p-6 border-gray-200" style={{ display: "flex", justifyContent: "space-around" }}>
@@ -24,10 +30,7 @@ export function AppSidebar({ items, expandedItems, onToggleExpanded, onClose, cu
           className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
           onClick={onClose}
         >
-          <div className="w-6 h-6 bg-purple-600 rounded flex items-center justify-center">
-            <div className="w-3 h-3 bg-white rounded-sm"></div>
-          </div>
-          <span className="font-semibold text-gray-900">Whimsical</span>
+          <img src={LogoPassChumbo} />
         </Link>
         <span className="text-gray-600 text-sm mt-1 block help-center">Help Center</span>
       </div>
@@ -73,13 +76,13 @@ function SidebarItemComponent({ item, index, isExpanded, onToggleExpanded, onClo
       >
         <div className="flex items-center space-x-2">
           <div dangerouslySetInnerHTML={{ __html: item.iconHtml }} />
-          <span className="primary-font-color xl-font">{item.title}</span>
+          <span className="primary-font-color xl-font" style={{ color: "#000000" }}>{item.title}</span>
         </div>
-        {item.hasChevron && (
+        {/* {item.hasChevron && (
           <ChevronRight
             className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${isExpanded ? "rotate-90" : ""}`}
           />
-        )}
+        )} */}
         {item.hasExternalLink && <ExternalLink className="w-4 h-4 text-gray-400" />}
       </div>
       {item.hasChevron && isExpanded && item.subitems && (
@@ -88,9 +91,8 @@ function SidebarItemComponent({ item, index, isExpanded, onToggleExpanded, onClo
             <Link
               key={subIndex}
               href={`/article/${subitem.slug}`}
-              className={`block px-3 py-1 text-sm rounded-md hover:bg-gray-50 cursor-pointer primary-font-color xl-sub-item primary-font-color xl-font ${
-                currentSlug === subitem.slug ? "bg-purple-50 text-purple-700 font-medium" : "text-gray-600"
-              }`}
+              className={`block px-3 py-1 text-sm rounded-md hover:bg-gray-50 cursor-pointer primary-font-color xl-sub-item primary-font-color xl-font ${currentSlug === subitem.slug ? "bg-purple-50 text-purple-700 font-medium" : "text-gray-600"
+                }`}
               onClick={onClose}
             >
               {subitem.title}

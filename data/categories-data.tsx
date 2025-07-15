@@ -5,7 +5,7 @@ export const categories = [
     icon: (
       <div
         className="w-4 h-4 rounded-full bg-slate-600 flex items-center justify-center group-hover:bg-slate-700 transition-colors"
-        style={{ color: "#fff" }}
+        style={{ color: "#252525" }}
       >
         <div className="w-2 h-2 bg-white rounded-full"></div>
       </div>
@@ -19,7 +19,7 @@ export const categories = [
     icon: (
       <Keyboard
         className="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors"
-        style={{ color: "#fff" }}
+        style={{ color: "#252525" }}
       />
     ),
     title: "Keyboard shortcuts",
@@ -31,7 +31,7 @@ export const categories = [
     icon: (
       <Layout
         className="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors"
-        style={{ color: "#fff" }}
+        style={{ color: "#252525" }}
       />
     ),
     title: "Whimsical boards",
@@ -43,7 +43,7 @@ export const categories = [
     icon: (
       <FolderOpen
         className="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors"
-        style={{ color: "#fff" }}
+        style={{ color: "#252525" }}
       />
     ),
     title: "Whimsical projects",
@@ -55,7 +55,7 @@ export const categories = [
     icon: (
       <FileText
         className="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors"
-        style={{ color: "#fff" }}
+        style={{ color: "#252525" }}
       />
     ),
     title: "Whimsical docs",
@@ -67,7 +67,7 @@ export const categories = [
     icon: (
       <HelpCircle
         className="w-4 h-4 text-slate-500 group-hover:text-slate-600 transition-colors"
-        style={{ color: "#fff" }}
+        style={{ color: "#252525" }}
       />
     ),
     title: "FAQs",
@@ -79,7 +79,7 @@ export const categories = [
     icon: (
       <Palette
         className="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors"
-        style={{ color: "#fff" }}
+        style={{ color: "#252525" }}
       />
     ),
     title: "Themes & templates",
@@ -91,7 +91,7 @@ export const categories = [
     icon: (
       <CreditCard
         className="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors"
-        style={{ color: "#fff" }}
+        style={{ color: "#252525" }}
       />
     ),
     title: "Subscription & billing",

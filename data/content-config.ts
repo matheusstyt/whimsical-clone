@@ -8,17 +8,17 @@ export const defaultContent: ContentConfig = {
   },
   homepage: {
     hero: {
-      title: "How {can we help?}",
+      title: "Como podemos ajudar?",
       subtitle:
-        'Get answers, gain understanding, and<br className="hidden sm:block" />learn how to work faster in Whimsical.',
-      searchPlaceholder: "Search help articles (e.g. flowcharts, integrations or settings)",
+        'Encontre respostas, compreenda melhor e aprenda a <br> trabalhar de forma mais agil no Pass.',
+      searchPlaceholder: "Procure ajuda nos artigos (ex: como configurar seu site)",
     },
     categories: {
-      title: "All categories",
+      title: "Todas as categorias",
       items: [
         {
           iconHtml:
-            '<div class="w-4 h-4 rounded-full bg-slate-600 flex items-center justify-center group-hover:bg-slate-700 transition-colors" style="color: #fff"><div class="w-2 h-2 bg-white rounded-full"></div></div>',
+            '<div class="w-4 h-4 rounded-full bg-slate-600 flex items-center justify-center group-hover:bg-slate-700 transition-colors" style="color: #000000 "><div class="w-2 h-2 bg-white rounded-full"></div></div>',
           title: "Getting started",
           description: "Get to know Whimsical at a high level so you can start creating.",
           articles: "(19 ARTICLES)",
@@ -26,7 +26,7 @@ export const defaultContent: ContentConfig = {
         },
         {
           iconHtml:
-            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #fff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>',
+            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #000000 " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>',
           title: "Keyboard shortcuts",
           description: "Keep your hands off the mouse, and use Whimsical at speed.",
           articles: "(2 ARTICLES)",
@@ -34,7 +34,7 @@ export const defaultContent: ContentConfig = {
         },
         {
           iconHtml:
-            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #fff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>',
+            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #000000 " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>',
           title: "Whimsical boards",
           description: "Build diagrams, design wireframes & manage cards.",
           articles: "(27 ARTICLES)",
@@ -42,7 +42,7 @@ export const defaultContent: ContentConfig = {
         },
         {
           iconHtml:
-            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #fff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v6m8-6v6"></path></svg>',
+            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #000000 " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v6m8-6v6"></path></svg>',
           title: "Whimsical projects",
           description: "Manage your projects calmly from idea to completion.",
           articles: "(5 ARTICLES)",
@@ -50,7 +50,7 @@ export const defaultContent: ContentConfig = {
         },
         {
           iconHtml:
-            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #fff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>',
+            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #000000 " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>',
           title: "Whimsical docs",
           description: "Create rich and connected long form content.",
           articles: "(16 ARTICLES)",
@@ -58,7 +58,7 @@ export const defaultContent: ContentConfig = {
         },
         {
           iconHtml:
-            '<svg class="w-4 h-4 text-slate-500 group-hover:text-slate-600 transition-colors" style="color: #fff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
+            '<svg class="w-4 h-4 text-slate-500 group-hover:text-slate-600 transition-colors" style="color: #000000 " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
           title: "FAQs",
           description: "Get answers to frequently asked questions.",
           articles: "(33 ARTICLES)",
@@ -66,7 +66,7 @@ export const defaultContent: ContentConfig = {
         },
         {
           iconHtml:
-            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #fff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path></svg>',
+            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #000000 " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path></svg>',
           title: "Themes & templates",
           description: "Produce consistent, quick and beautiful content easily.",
           articles: "(5 ARTICLES)",
@@ -74,7 +74,7 @@ export const defaultContent: ContentConfig = {
         },
         {
           iconHtml:
-            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #fff" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>',
+            '<svg class="w-4 h-4 text-slate-600 group-hover:text-slate-700 transition-colors" style="color: #000000 " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>',
           title: "Subscription & billing",
           description: "Understand your invoices and updating your billing information.",
           articles: "(9 ARTICLES)",

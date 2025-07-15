@@ -48,7 +48,7 @@ export function HomePage() {
       onMainSearchChange={setModalSearchValue}
     >
       <div className="px-4 lg:px-6 py-8 ml-[300px]" style={{ paddingTop: "80px" }}>
-        <div className="max-w-6xl ttt">
+        <div className="max-w-6xl ttt font-jakarta">
           <HeroSection
             title={content.homepage.hero.title}
             subtitle={content.homepage.hero.subtitle}
