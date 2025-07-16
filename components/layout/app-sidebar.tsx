@@ -17,7 +17,7 @@ export function AppSidebar({ items, expandedItems, onToggleExpanded, onClose, cu
     <aside
       className="xl:static inset-y-0 left-0 z-50 w-80 bg-white border-r border-gray-200 transform transition-transform duration-300 ease-in-out xl:transform-none primary-bg-color"
       style={{
-        maxWidth: "300px",
+        width: "calc(100vw * 0.24)",
         position: "fixed",
         background: "#F5F5F5",
         borderRight: "1px solid #ccccccff",

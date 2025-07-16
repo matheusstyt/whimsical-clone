@@ -17,7 +17,7 @@ export function AppHeader({ searchValue, onSearchChange, onOpenSearchModal, onOp
       className="bg-white border-b border-gray-200 px-4 xl:px-6 py-2.5 primary-bg-color"
       style={{
         position: "fixed",
-        width: "calc(100vw - 300px)",
+        width: "calc(100vw * 0.76)",
         right: 0,
         zIndex: 3,
         background: "#F5F5F5",
