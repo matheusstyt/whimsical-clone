@@ -9,9 +9,9 @@ interface CategoriesGridProps {
 export function CategoriesGrid({ title, categories }: CategoriesGridProps) {
   return (
     <div
-      className="max-w-full xl:max-w-none lg:max-w-[600px] lg:mx-auto"
+      className=" max-w-[500px] lg:mx-auto"
       style={{
-        // background: "red",
+        maxWidth: "1300px",
         width: "calc((100vw * 0.76) * 0.8)",
       }}
     >
