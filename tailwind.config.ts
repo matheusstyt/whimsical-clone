@@ -91,6 +91,10 @@ const config: Config = {
   		},
 		fontFamily: {
 			jakarta: ["plus-jakarta"]
+		},
+		 fontSize:{
+		'responsive-title':'clamp(2rem, 5vw, 4.5rem)',
+		'responsive-subtitle':'clamp(1rem, 2.5vw, 1.25rem)',
 		}
   	}
   },

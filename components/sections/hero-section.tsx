@@ -28,7 +28,7 @@ export function HeroSection({
         return (
           <span
             key={index}
-            className="bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 bg-clip-text text-transparent title-size"
+            className="title-size"
           >
             {content}
           </span>

@@ -37,7 +37,7 @@
 }
 
 .title-size {
-  font-size: 72px !important;
+  font-size:  clamp(32px, 4.5vw, 56px);
   font-weight: 600;
 }
 
@@ -143,21 +143,7 @@
   }
 
 }
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .title-size {
-    font-size: 48px !important;
-  }
-
-  .main-search-container {
-    max-width: 30rem;
-  }
-
-  .card-item {
-    width: calc(33.333% - 1rem);
-    max-height: 13rem;
-  }
-}
+ 
 
 /* Nest Hub Max specific (1280px+) */
 @media (min-width: 1280px) {
