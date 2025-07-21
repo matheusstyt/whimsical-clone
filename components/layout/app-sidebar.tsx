@@ -17,14 +17,20 @@ export function AppSidebar({ items, expandedItems, onToggleExpanded, onClose, cu
     <aside
       className="xl:static inset-y-0 left-0 z-50 w-80 bg-white border-r border-gray-200 transform transition-transform duration-300 ease-in-out xl:transform-none primary-bg-color"
       style={{
-        width: "calc(100vw * 0.24)",
+        width: "270px",
         position: "fixed",
         background: "#F5F5F5",
         borderRight: "1px solid #ccccccff",
       }}
     >
       {/* Sidebar Header */}
-      <div className="p-6 border-gray-200" style={{ display: "flex", justifyContent: "space-around" }}>
+      <div
+        className="border-gray-200 pl-7 pr-5 py-2"
+        style={{
+          display: "flex",
+          justifyContent: "space-between"
+        }}
+      >
         <Link
           href="/"
           className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
@@ -32,10 +38,20 @@ export function AppSidebar({ items, expandedItems, onToggleExpanded, onClose, cu
         >
           <img src={LogoPassChumbo} />
         </Link>
-        <span className="text-black-600 text-sm mt-1 block help-center">Help Center</span>
+        <span
+          className="text-black-600 font-bold text-sm mt-1 block py-1 px-2"
+          style={{
+            color: "#000000",
+            background: "#FFFFFF",
+            fontSize: "calc((100vh * 0.06) * 0.26)",
+            borderRadius: "calc(100vh * 0.26)",
+          }}
+        >Help Center</span>
       </div>
 
-      <nav className="px-4 space-y-1 overflow-y-auto h-full" style={{ height: "100vh" }}>
+      <nav
+        className="px-4 overflow-y-auto h-full"
+      >
         {items.map((item, index) => (
           <SidebarItemComponent
             key={index}
@@ -63,7 +79,8 @@ interface SidebarItemProps {
 
 function SidebarItemComponent({ item, index, isExpanded, onToggleExpanded, onClose, currentSlug }: SidebarItemProps) {
   return (
-    <div style={{ marginBottom: "11px" }}>
+    <div
+    >
       <div
         className="flex items-center justify-between px-3 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 cursor-pointer group"
         onClick={() => {
@@ -74,9 +91,19 @@ function SidebarItemComponent({ item, index, isExpanded, onToggleExpanded, onClo
           }
         }}
       >
-        <div className="flex items-center space-x-2">
+        <div
+          className="flex items-center space-x-2"
+        >
           <div dangerouslySetInnerHTML={{ __html: item.iconHtml }} />
-          <span className="primary-font-color xl-font" style={{ color: "#000000" }}>{item.title}</span>
+          <span
+            className="primary-font-color xl-font"
+            style={{
+              color: "#000000",
+              fontSize: "calc((100vh * 0.06) * 0.29)",
+            }}
+          >
+            {item.title}
+          </span>
         </div>
         {/* {item.hasChevron && (
           <ChevronRight

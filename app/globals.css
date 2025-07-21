@@ -5,21 +5,21 @@
 @font-face {
   font-family: plus-jakarta;
   src: url('../public/Fonte/PlusJakartaSans-Regular.ttf') format('truetype');
-  font-weight: 400; 
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: plus-jakarta;
   src: url('../public/Fonte/PlusJakartaSans-Medium.ttf') format('truetype');
-  font-weight: 500; 
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: plus-jakarta;
   src: url('../public/Fonte/PlusJakartaSans-Bold.ttf') format('truetype');
-  font-weight: 700; 
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -130,13 +130,24 @@
 }
 
 .title-size {
-  font-size: 72px !important;
+  line-height: 1.5;
+  /* background: red; */
+  font-size: calc(100vh * 0.065);
   font-weight: 600;
 }
 
 .subtitle-size {
-  font-size: 20px;
-  line-height: 1.39;
+  color: red;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: calc((100vh * 0.06) * 0.28);
+}
+
+@media (max-width: 1024px) {
+  /* .title-size {
+    font-size: calc(100vh * 0.05);
+    font-weight: 600;
+  } */
 }
 
 /* 📱 LAYOUT RESPONSIVO */
@@ -324,6 +335,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   border-left: 3px solid transparent;
+  color: red;
 }
 
 .sidebar-item:hover {
@@ -486,52 +498,6 @@
   }
 }
 
-@media (max-width: 640px) {
-  .title-size {
-    font-size: 2.5rem;
-  }
-
-  .subtitle-size {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 1023px) {
-  .title-size {
-    font-size: 3.5rem;
-  }
-
-  .subtitle-size {
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .title-size {
-    font-size: 32px !important;
-  }
-}
-
-@media (max-width: 1023px) {
-  .title-size {
-    font-size: 32px !important;
-  }
-
-  .subtitle-size {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 767px) {
-  .title-size {
-    font-size: 36px !important;
-  }
-
-  .subtitle-size {
-    font-size: 16px;
-  }
-}
-
 /* 🎯 ANIMAÇÕES E TRANSIÇÕES */
 .fade-in {
   animation: fadeIn 0.3s ease-in-out;
@@ -542,6 +508,7 @@
     opacity: 0;
     transform: translateY(0.5rem);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -557,6 +524,7 @@
     transform: translateX(-1rem);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -667,34 +635,42 @@
 }
 
 /* 🎨 UTILITÁRIOS DE ESPAÇAMENTO */
-.space-y-1 > * + * {
+.space-y-1>*+* {
   margin-top: 0.25rem;
 }
-.space-y-2 > * + * {
+
+.space-y-2>*+* {
   margin-top: 0.5rem;
 }
-.space-y-3 > * + * {
+
+.space-y-3>*+* {
   margin-top: 0.75rem;
 }
-.space-y-4 > * + * {
+
+.space-y-4>*+* {
   margin-top: 1rem;
 }
-.space-y-6 > * + * {
+
+.space-y-6>*+* {
   margin-top: 1.5rem;
 }
-.space-y-8 > * + * {
+
+.space-y-8>*+* {
   margin-top: 2rem;
 }
 
-.space-x-1 > * + * {
+.space-x-1>*+* {
   margin-left: 0.25rem;
 }
-.space-x-2 > * + * {
+
+.space-x-2>*+* {
   margin-left: 0.5rem;
 }
-.space-x-3 > * + * {
+
+.space-x-3>*+* {
   margin-left: 0.75rem;
 }
-.space-x-4 > * + * {
+
+.space-x-4>*+* {
   margin-left: 1rem;
 }

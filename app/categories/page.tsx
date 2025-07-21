@@ -14,11 +14,12 @@ export default function CategoriesPage() {
       <div className="px-4 lg:px-6 py-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Todas as{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-                Categorias
-              </span>
+            <h1 className="text-black-900 mb-4"
+              style={{
+                fontSize: "calc((100vh * 0.06) * 0.34)",
+              }}
+            >
+              Todas as Categorias
             </h1>
             <p className="text-lg text-gray-600">Explore todos os tópicos de ajuda organizados por categoria</p>
           </div>

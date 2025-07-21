@@ -65,7 +65,7 @@ export function HomePage() {
 
             marginTop: "56px",
             fontSize: "42px",
-            width: "calc(100vw * 0.76)",
+            width: "calc(100vw - 270px)",
 
             padding: "calc(100vh * 0.09) 0 calc(100vh * 0.16) 0"
           }}
