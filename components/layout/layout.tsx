@@ -73,17 +73,11 @@ export const Layout: React.FC<LayoutProps> & LayoutComposition = ({
 
       {sidebarOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40 xl:hidden" onClick={closeSidebar} />}
 
-      <AppSidebar
-        items={content.sidebar.items}
-        expandedItems={expandedItems}
-        onToggleExpanded={toggleExpanded}
-        onClose={closeSidebar}
-        currentSlug={currentSlug}
-      />
       <main className={
         clsx(
-          "pl-72 flex flex-col min-h-screen primary-bg-color",
-          
+          'ml-0',
+          'lg:ml-72',
+          "flex flex-col min-h-screen primary-bg-color",
         )
       }>
         <AppHeader
@@ -91,6 +85,13 @@ export const Layout: React.FC<LayoutProps> & LayoutComposition = ({
           onSearchChange={onSearchChange}
           onOpenSearchModal={handleOpenSearchModal}
           onOpenSidebar={() => setSidebarOpen(true)}
+        />
+         <AppSidebar
+          items={content.sidebar.items}
+          expandedItems={expandedItems}
+          onToggleExpanded={toggleExpanded}
+          onClose={closeSidebar}
+          currentSlug={currentSlug}
         />
      
         {children}
