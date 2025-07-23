@@ -1,10 +1,12 @@
+import { ReactElement } from "react"
+
 export interface SidebarSubitem {
   title: string
   slug: string
 }
 
 export interface SidebarItem {
-  iconHtml: string
+  iconHtml: ReactElement
   title: string
   description?: string
   hasChevron: boolean

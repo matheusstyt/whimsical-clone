@@ -1,4 +1,21 @@
 import type { ContentConfig } from "@/types/content"
+import {
+  Rocket,
+  Keyboard,
+  LayoutDashboard,
+  Briefcase,
+  FileText,
+  HelpCircle,
+  Palette,
+  CreditCard,
+  User,
+  Users,
+  ArrowDownCircle,
+  ArrowUpCircle,
+  Link2,
+  Mail,
+  ArrowLeftRight
+} from 'lucide-react';
 
 export const defaultContent: ContentConfig = {
   settings: {
@@ -86,11 +103,10 @@ export const defaultContent: ContentConfig = {
   sidebar: {
     items: [
       {
-        iconHtml:
-          '<div class="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center icon-sidebar"><div class="w-2 h-2 bg-white rounded-full"></div></div>',
         title: "Getting started",
         description: "Get to know Whimsical at a high level so you can start creating.",
         hasChevron: true,
+        iconHtml: <Rocket className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "Getting started with sequence diagrams", slug: "getting-started/sequence-diagrams" },
           { title: "What is Whimsical?", slug: "getting-started/what-is-whimsical" },
@@ -100,134 +116,123 @@ export const defaultContent: ContentConfig = {
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>',
         title: "Keyboard shortcuts",
         description: "Keep your hands off the mouse, and use Whimsical at speed.",
         hasChevron: true,
+        iconHtml: <Keyboard className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "General shortcuts", slug: "keyboard-shortcuts/general" },
           { title: "Board shortcuts", slug: "keyboard-shortcuts/board" },
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>',
         title: "Whimsical boards",
         description: "Build diagrams, design wireframes & manage cards.",
         hasChevron: true,
+        iconHtml: <LayoutDashboard className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "Creating boards", slug: "whimsical-boards/creating" },
           { title: "Board templates", slug: "whimsical-boards/templates" },
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v6m8-6v6"></path></svg>',
         title: "Whimsical projects",
         description: "Manage your projects calmly from idea to completion.",
         hasChevron: true,
+        iconHtml: <Briefcase className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "Creating projects", slug: "whimsical-projects/creating" },
           { title: "Project management", slug: "whimsical-projects/management" },
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>',
         title: "Whimsical docs",
         description: "Create rich and connected long form content.",
         hasChevron: true,
+        iconHtml: <FileText className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "Creating docs", slug: "whimsical-docs/creating" },
           { title: "Formatting text", slug: "whimsical-docs/formatting" },
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
         title: "FAQs",
         description: "Get answers to frequently asked questions.",
         hasChevron: true,
+        iconHtml: <HelpCircle className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "General questions", slug: "faqs/general" },
           { title: "Billing questions", slug: "faqs/billing" },
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path></svg>',
         title: "Themes & templates",
         description: "Produce consistent, quick and beautiful content easily.",
         hasChevron: true,
+        iconHtml: <Palette className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "Using themes", slug: "themes-templates/themes" },
           { title: "Creating templates", slug: "themes-templates/templates" },
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>',
         title: "Subscription & billing",
-        description: "Understand your invoices and updating your billing information.",
+        description: "Understand your invoices and update your billing information.",
         hasChevron: true,
+        iconHtml: <CreditCard className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "Plans & pricing", slug: "subscription-billing/plans" },
           { title: "Payment methods", slug: "subscription-billing/payment" },
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>',
         title: "Account settings",
         description: "",
         hasChevron: true,
+        iconHtml: <User className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "Profile settings", slug: "account-settings/profile" },
           { title: "Notification preferences", slug: "account-settings/notifications" },
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path></svg>',
-        title: "Managing workspaces",
+        title: "Workspace settings",
         description: "",
         hasChevron: true,
+        iconHtml: <Users className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "Workspace settings", slug: "managing-workspaces/settings" },
           { title: "Member management", slug: "managing-workspaces/members" },
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>',
         title: "Imports & exports",
         description: "",
         hasChevron: true,
+        iconHtml: <ArrowLeftRight />,
         subitems: [
           { title: "Importing files", slug: "imports-exports/importing" },
           { title: "Exporting content", slug: "imports-exports/exporting" },
         ],
       },
       {
-        iconHtml:
-          '<svg class="w-4 h-4 text-gray-600 icon-sidebar" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>',
         title: "Integrations",
         description: "",
         hasChevron: true,
+        iconHtml: <Link2 className="w-5 h-5 inline-block mr-2" />,
         subitems: [
           { title: "Available integrations", slug: "integrations/available" },
           { title: "Setting up integrations", slug: "integrations/setup" },
         ],
       },
       {
-        iconHtml: '<div class="w-4 h-4 rounded bg-gray-300"></div>',
         title: "Contact us",
         description: "",
         hasChevron: false,
         hasExternalLink: true,
+        iconHtml: <Mail className="w-5 h-5 inline-block mr-2" />,
       },
-    ],
+    ]
   },
   articles: {
     "getting-started/sequence-diagrams": {

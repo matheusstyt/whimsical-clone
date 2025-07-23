@@ -28,11 +28,6 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
     }
   }, [])
 
-  // Save content to localStorage whenever it changes
-  useEffect(() => {
-    // localStorage.setItem("whimsical-content", JSON.stringify(content))
-  }, [content])
-
   const updateContent = (section: string, data: any) => {
     setContent((prev) => ({
       ...prev,

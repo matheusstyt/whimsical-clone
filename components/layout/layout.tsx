@@ -7,6 +7,7 @@ import { useSearch } from "@/hooks/use-search"
 import { AppSidebar } from "./app-sidebar"
 import { AppHeader } from "./app-header"
 import { SearchModal } from "../modals/search-modal"
+import clsx from "clsx"
 
 interface LayoutProps {
   children: React.ReactNode
@@ -69,28 +70,31 @@ export const Layout: React.FC<LayoutProps> & LayoutComposition = ({
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="flex relative">
-        {/* Mobile sidebar overlay */}
-        {sidebarOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40 xl:hidden" onClick={closeSidebar} />}
 
-        <AppSidebar
-          items={content.sidebar.items}
-          expandedItems={expandedItems}
-          onToggleExpanded={toggleExpanded}
-          onClose={closeSidebar}
-          currentSlug={currentSlug}
+      {sidebarOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40 xl:hidden" onClick={closeSidebar} />}
+
+      <AppSidebar
+        items={content.sidebar.items}
+        expandedItems={expandedItems}
+        onToggleExpanded={toggleExpanded}
+        onClose={closeSidebar}
+        currentSlug={currentSlug}
+      />
+      <main className={
+        clsx(
+          "pl-72 flex flex-col min-h-screen primary-bg-color",
+          
+        )
+      }>
+        <AppHeader
+          searchValue={searchValue}
+          onSearchChange={onSearchChange}
+          onOpenSearchModal={handleOpenSearchModal}
+          onOpenSidebar={() => setSidebarOpen(true)}
         />
-
-        <main className="flex-1 min-h-screen primary-bg-color" style={{ background: "#F5F5F5 "}}>
-          <AppHeader
-            searchValue={searchValue}
-            onSearchChange={onSearchChange}
-            onOpenSearchModal={handleOpenSearchModal}
-            onOpenSidebar={() => setSidebarOpen(true)}
-          />
-          {children}
-        </main>
-      </div>
+     
+        {children}
+      </main>
 
       <SearchModal
         isOpen={isModalOpen}
